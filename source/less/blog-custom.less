@@ -1,0 +1,39 @@
+@import "bootstrap/bootstrap.less";
+@import "mreq.less";
+// Plugins
+@import "vendor/magnific-popup.less";
+
+// Layout
+html, body, #m-container, #m-row, #m-col {
+	min-width: 320px;
+}
+#m-col {
+	float: none;
+	margin: 0 auto;
+}
+
+
+// Width transitions
+.container, .row, div[class*="col-"] {
+	.transition(width 0.5s);
+}
+
+// Code highlighting
+@import "vendor/code-highlight.less";
+pre, code {
+	background: #eee;
+	border: 1px solid #ccc;
+}
+code {
+	display: inline-block;
+	padding: 1px 2px;
+	font-size: 0.9em;
+	vertical-align: middle;
+}
+pre {
+	margin: 0;
+	padding: @bl;
+	& + p {
+		padding-top: (@line-height-computed / 2);
+	}
+}
