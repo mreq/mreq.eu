@@ -1,0 +1,8 @@
+<% for article in blog.articles %>
+	<article>
+		<%= partial '_article-header', :locals => { :article => article, :link_title => true } %>
+		<div class="m-summary">
+			<%= article.summary %>
+		</div>
+	</article>
+<% end %>

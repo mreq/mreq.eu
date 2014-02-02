@@ -1,17 +1,73 @@
 @import "bootstrap/bootstrap.less";
 @import "mreq.less";
+@import "fonts.less";
 // Plugins
 @import "vendor/magnific-popup.less";
 
+// Variables
+@bs: 2*@bl/3;
+// Mixins
+.ff(@f: 'TeXGyreAdventorRegular') {
+	font-family: @f, Arial, Helvetica, sans-serif;
+}
+
 // Layout
-html, body, #m-container, #m-row, #m-col {
+html, body, #m-container, #m-row, #m-col, #m-sub-row, #m-sub-col {
 	min-width: 320px;
 }
-#m-col {
+#m-col, #m-sub-col {
 	float: none;
 	margin: 0 auto;
 }
+#m-sub-row {
+	padding: 3*@bs;
+}
 
+// Typography
+h1, h2 {
+	.fsize(1.75*@bf);
+}
+article#m-col {
+	p {
+		margin-bottom: @bs;
+		a[href^="/articles/images"] {
+			display: inline-block;
+			.transition(opacity 0.5s);
+			&:hover {
+				.opacity(0.85);
+			}
+			@media screen and (min-width: 480px) {
+				& + a[href^="/articles/images"] {
+					margin-left: @bs;
+				}
+			}
+			@media screen and (max-width: 480px) {
+				margin-bottom: @bs;
+				display: block;
+				text-align: center;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+article {
+	header {
+		.m-article-tags, .m-article-date {
+			padding-bottom: @bs;
+		}
+		.m-article-tags {
+			li {
+				display: inline-block;
+				list-style: none;
+			}
+			@media screen and (min-width: @screen-sm-min) {
+				text-align: right;
+			}
+		}
+	}
+}
 
 // Width transitions
 .container, .row, div[class*="col-"] {
@@ -34,6 +90,6 @@ pre {
 	margin: 0;
 	padding: @bl;
 	& + p {
-		padding-top: (@line-height-computed / 2);
+		padding-top: @bs;
 	}
 }

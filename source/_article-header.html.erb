@@ -1,0 +1,22 @@
+<header class="m-article-header">
+	<h1 class="m-article-h1">
+		<% if link_title %>
+			<a href="<%= article.url %>"><%= article.title %></a>
+		<% else %>
+			<%= article.title %>
+		<% end %>
+	</h1>
+	<div class="row">
+		<div class="m-article-date col-sm-4">
+			Posted: <%= article.date.strftime '%d/%m/%Y' %>
+		</div>
+		<ul class="m-article-tags col-sm-8">
+			<li>Tagged:</li>
+			<% for tag in article.tags %>
+				<li>
+					<%= link_to tag, tag_path(tag) %><% if article.tags.last != tag %>,<% end %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</header>

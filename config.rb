@@ -45,6 +45,7 @@ activate :blog do |blog|
   blog.sources = "articles/{year}-{month}-{day}-{slug}.html"
   blog.taglink = "tagged/{tag}"
   blog.tag_template = "tag.html"
+  blog.layout = "article.html"
 end
 
 set :markdown_engine, :redcarpet
@@ -57,11 +58,12 @@ activate :directory_indexes
 set :haml, { ugly: true }
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def render_file(filename)
+    contents = File.read(filename)
+    Haml::Engine.new(contents).render
+  end
+end
 
 set :css_dir, 'css'
 

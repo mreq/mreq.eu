@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content=<%= current_page.data.description || "A blog by mreq." %>>
+		<meta name="viewport" content="width=device-width">
+
+		<title><%= current_page.data.title ? "#{current_page.data.title} | mreq.eu" : "mreq.eu" %></title>		
+
+		<%= stylesheet_link_tag 'mreq-blog' %>
+		<%= javascript_include_tag 'vendor/respond.min' %>
+
+	</head>
+	<body>
+		<div id="m-container" class="container">
