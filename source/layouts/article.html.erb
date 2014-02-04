@@ -2,7 +2,7 @@
 	
 <section id="m-row" class="row">
 	<article id="m-col" class="col-md-10">
-		<%= partial '_article-header', :locals => { :article => current_article, :link_title => false } %>
+		<%= partial '_article-header', :locals => { :article => current_article, :link_title => false, :heading => 'h1' } %>
 
 		<%= yield %>
 	</article>

@@ -14,3 +14,12 @@
 	</head>
 	<body>
 		<div id="m-container" class="container">
+			<div class="row">
+				<header id="m-header" class="col-md-10">
+					<% tag = (current_page.data.is_index) ? 'h1' : 'strong' %>
+					<<%= tag %> class="m-site-name">
+						<a href="/">mreq</a>
+						<small>a blog about <a href="<%= tag_path 'ubuntu' %>">ubuntu</a>, the <a href="<%= tag_path 'web' %>">web</a> and <a href="<%= tag_path 'sublime text 2' %>">sublime text 2</a></small>
+					</<%= tag %>>
+				</header>
+			</div>

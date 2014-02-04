@@ -1,31 +1,66 @@
 @import "bootstrap/bootstrap.less";
 @import "mreq.less";
-@import "fonts.less";
+// @import "fonts.less";
 // Plugins
 @import "vendor/magnific-popup.less";
 
 // Variables
 @bs: 2*@bl/3;
+@gray: #999;
 // Mixins
 .ff(@f: 'TeXGyreAdventorRegular') {
 	font-family: @f, Arial, Helvetica, sans-serif;
 }
 
 // Layout
-html, body, #m-container, #m-row, #m-col, #m-sub-row, #m-sub-col {
+html, body, .container, .row, .col-md-10 {
 	min-width: 320px;
 }
-#m-col, #m-sub-col {
+#m-col, #m-sub-col, #m-header {
 	float: none;
 	margin: 0 auto;
 }
 #m-sub-row {
 	padding: 3*@bs;
 }
+.m-article-list {
+	.m-article-tag-name {
+		margin: 0 0 2*@bs;
+	}
+	article {
+		margin: 0 0 3*@bs;
+	}
+}
+#m-header {
+	padding-top: @bs;
+	padding-bottom: 2*@bs;
+}
 
 // Typography
-h1, h2 {
+.m-site-name {
+	.fsize(2*@bf);
+	.ff(TeXGyreAdventorBold);
+	font-weight: bold;
+	display: block;
+	margin: 0;
+	padding: 0;
+	> a {
+		text-decoration: none;
+	}
+	small {
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: normal;
+		.fsize(@bf, 2*@bl);
+		&, a {
+			color: @gray;
+		}
+	}
+}
+h1 {
 	.fsize(1.75*@bf);
+}
+h2 {
+	.fsize(1.5*@bf);
 }
 article#m-col {
 	p {
@@ -54,10 +89,23 @@ article#m-col {
 }
 article {
 	header {
-		.m-article-tags, .m-article-date {
+		h1, h2 {
+			margin: 0;
+			line-height: 1em;
+		}
+		h1, h2, .m-article-tags, .m-article-date {
 			padding-bottom: @bs;
+			.m-article-list & {
+				padding-bottom: @bs/2;
+			}
+		}
+		.m-article-tags, .m-article-date {
+			&, a {
+				color: @gray;
+			}
 		}
 		.m-article-tags {
+			margin-bottom: 0;
 			li {
 				display: inline-block;
 				list-style: none;

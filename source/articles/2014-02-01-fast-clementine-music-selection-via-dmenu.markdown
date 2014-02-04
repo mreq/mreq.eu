@@ -35,7 +35,7 @@ function handleSelection {
 		
 		notify-send -i clementine "$msg" "$folder"
 		if [ $flag == 'load' ]; then clementine --stop; fi
-		clementine --$flag "~/Music/$folder"
+		clementine --$flag "/home/$( whoami )/Music/$folder"
 		if [ $flag == 'load' ]; then clementine --play; fi
 
 	fi
@@ -47,7 +47,7 @@ if ! pgrep -x clementine >/dev/null; then
 	clementine &
 fi
 
-handleSelection "$( cd ~/Music; ls -d */* | dmenu -i -b -l 10 -nb '#242424' -nf white -sb '#2e557e' )"
+handleSelection "$( cd /home/$( whoami )/Music; ls -d */* | dmenu_custom )"
 
 exit 0
 ```

@@ -1,8 +1,13 @@
-<% for article in blog.articles %>
-	<article>
-		<%= partial '_article-header', :locals => { :article => article, :link_title => true } %>
-		<div class="m-summary">
-			<%= article.summary %>
-		</div>
-	</article>
-<% end %>
+---
+is_index: true
+---
+<div class="m-article-list">
+	<% for article in blog.articles %>
+		<article>
+			<%= partial '_article-header', :locals => { :article => article, :link_title => true, :heading => 'h2' } %>
+			<div class="m-summary">
+				<%= article.summary %>
+			</div>
+		</article>
+	<% end %>
+</div>
