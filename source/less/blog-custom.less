@@ -16,7 +16,7 @@
 html, body, .container, .row, .col-md-10 {
 	min-width: 320px;
 }
-#m-col, #m-sub-col, #m-header {
+.col-md-10 {
 	float: none;
 	margin: 0 auto;
 }
@@ -34,16 +34,62 @@ html, body, .container, .row, .col-md-10 {
 #m-header {
 	padding-top: @bs;
 	padding-bottom: 2*@bs;
+	> .row {
+		position: relative;
+	}
+	#m-search {
+		@media screen and (min-width: @screen-sm-min) {
+			.topright(50%, 0);
+		}
+		@media screen and (max-width: @screen-sm-min) {
+			padding-top: @bf;
+			padding-bottom: @bf;
+		}
+		margin-top: -@bf;
+		text-align: right;
+		&, #m-search-input {
+			line-height: 2*@bf;
+			height: 2*@bf;
+		}
+		#m-search-input {
+			width: 100%;
+			border: 1px solid lighten(@gray, 20%);
+			padding: 0 @bf/2;
+			margin: -1px;
+			background: white;
+			text-align: center;
+			&:focus {
+				outline: none;
+				.box-shadow(0 0 5px lighten(@gray, 15%))
+			}
+		}
+	}
+}
+#m-footer {
+	padding-bottom: @bs;
+	ul {
+		.clearfix;
+		.list-unstyled;
+		padding-top: 2*@bs;
+		border-top: 1px dashed @gray;
+		li {
+			display: block;
+			float: left;
+		}
+		#m-portfolio-link {
+			float: right;
+		}
+	}
 }
 
 // Typography
 .m-site-name {
-	.fsize(2*@bf);
+	.fsize(2*@bf, 2*@bf);
 	.ff(TeXGyreAdventorBold);
 	font-weight: bold;
 	display: block;
 	margin: 0;
-	padding: 0;
+	// padding: 0;
 	> a {
 		text-decoration: none;
 	}
@@ -55,6 +101,10 @@ html, body, .container, .row, .col-md-10 {
 			color: @gray;
 		}
 	}
+}
+#m-portfolio-link a {
+	padding-right: 15px;
+	background: url(../images/external.png) center right no-repeat;
 }
 h1 {
 	.fsize(1.75*@bf);
@@ -137,6 +187,15 @@ code {
 pre {
 	margin: 0;
 	padding: @bl;
+	&.highlight.perl {
+		> *, & {
+			color: #333;
+		} 
+		&:before {
+			content: 'user@host:~$ ';
+			color: #777;
+		}
+	}
 	& + p {
 		padding-top: @bs;
 	}

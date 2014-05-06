@@ -14,8 +14,8 @@ We can use `dmenu` to go through our Music collection and make a auto-complete s
 
 We'll need to have some packages installed:
 
-```bash
-petr@sova:~$ sudo apt-get install dmenu clementine xbindkeys
+```perl
+sudo apt-get install dmenu clementine xbindkeys
 ```
 
 Save the following script (I named it `clementine_play_folder.sh`) and `chmod +x` it:
@@ -54,22 +54,22 @@ exit 0
 
 Be sure to replace and or edit the Music path at the bottom of the script if you  don't have a standard Music folder structure. Otherwise, it should work out of the box. The usage is quite simple, pass either `append` - to append the folder to the current playlist or `load` (which is default) - to replace the current playlist - option:
 
-```bash
-petr@sova:~$ clementine_play_folder.sh load
+```perl
+clementine_play_folder.sh load
 ```
 
 or
 
-```bash
-petr@sova:~$ clementine_play_folder.sh append
+```perl
+clementine_play_folder.sh append
 ```
 
 To set a global keyboard shortcut, I used `xbindkeys`. Relevant part of my `.xbindkeysrc`:
 
-	"/home/petr/scripts/clementine_play_folder.sh load"
+	"~/scripts/clementine_play_folder.sh load"
 		Mod4 + m
 
-	"/home/petr/scripts/clementine_play_folder.sh append"
+	"~/scripts/clementine_play_folder.sh append"
 		Mod4 + Shift + m
 
 That's all folks, enjoy :)

@@ -58,12 +58,8 @@ activate :directory_indexes
 set :haml, { ugly: true }
 
 # Methods defined in the helpers block are available in templates
-helpers do
-  def render_file(filename)
-    contents = File.read(filename)
-    Haml::Engine.new(contents).render
-  end
-end
+# helpers do
+# end
 
 set :css_dir, 'css'
 

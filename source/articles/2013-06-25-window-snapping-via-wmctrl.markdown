@@ -12,16 +12,16 @@ which we'll use to create our own./////
 We'll need `wmctrl` installed, avaiable from the standard
 repositories.
 
-```bash
-petr@sova:~$ sudo apt-get install wmctrl
+```perl
+sudo apt-get install wmctrl
 ```
 
 We'll use a script for the switching. Place it somewhere in your home
 directory (I did so in `~/scripts/bin/wmctrl_snap_window`) and make sure
 that it's executable - for my path:
 
-```bash
-petr@sova:~$ chmod +x petr ~/scripts/bin/wmctrl_snap_window
+```perl
+chmod +x petr ~/scripts/bin/wmctrl_snap_window
 ```
 
 Here's the script we'll use, you don't have to understand it in order to
@@ -49,23 +49,23 @@ exit 0
 To invoke the script, just call it with an (optional) argument `left` or
 `right` (default) to snap the window to left/right half of the screen:
 
-```bash
-petr@sova:~$ . ~/scripts/bin/wmctrl_snap_window left
+```perl
+. ~/scripts/bin/wmctrl_snap_window left
 ```
 
 or:
 
-```bash
-petr@sova:~$ . ~/scripts/bin/wmctrl_snap_window right
+```perl
+. ~/scripts/bin/wmctrl_snap_window right
 ```
 
 With `xbindkeys` installed it's easy to assign shortcuts, like so:
 
 ```
-"/home/petr/scripts/bin/wmctrl_snap_window left"
+"~/scripts/bin/wmctrl_snap_window left"
 	Mod4 + Left
 
-"/home/petr/scripts/bin/wmctrl_snap_window right"
+"~/scripts/bin/wmctrl_snap_window right"
 	Mod4 + Right
 ```
 

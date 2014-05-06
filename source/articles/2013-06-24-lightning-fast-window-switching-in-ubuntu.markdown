@@ -9,14 +9,14 @@ A tutorial on how to switch windows in Ubuntu really fast./////
 
 We'll need `wmctrl` and `xbindkeys` installed, both avaiable from the standard repositories:
 
-```bash
-petr@sova:~$ sudo apt-get install wmctrl xbindkeys
+```perl
+sudo apt-get install wmctrl xbindkeys
 ```
 
 We'll use a script for the switching. Place it somewhere in your home directory (I did so in `~/scripts/bin/switch_to_app`) and make sure that it's executable - for my path:
 
-```bash
-petr@sova:~$ chmod +x petr ~/scripts/bin/switch_to_app
+```perl
+chmod +x petr ~/scripts/bin/switch_to_app
 ```
 
 Here's the script we'll use, you don't have to understand it in order to use it:
@@ -57,20 +57,20 @@ To use the script, you invoke it by it's name and pass window identifier (see `w
 Aftewards make a `~/.xbindkeysrc` file with defined shortcuts, syntax is pretty straightforward:
 
 ```
-"/home/petr/scripts/bin/switch_to_app 'chromium-browser.Chromium-browser' chromium-browser"
+"~/scripts/bin/switch_to_app 'chromium-browser.Chromium-browser' chromium-browser"
     Mod4 + 1
 
-"/home/petr/scripts/bin/switch_to_app 'sublime_text.sublime-text-2' subl"
+"~/scripts/bin/switch_to_app 'sublime_text.sublime-text-2' subl"
     Mod4 + 2
 
-"/home/petr/scripts/bin/switch_to_app 'terminator.Terminator' terminator"
+"~/scripts/bin/switch_to_app 'terminator.Terminator' terminator"
     Mod4 + 3
 ```
 
 Once xbindkeys is loaded, fire your shortcuts at will. If you have multiple windows of an app opened, the script cycles through them. If you modify `.xbindkeysrc` you can restart xbindkeys by:
 
-```bash
-petr@sova:~$ killall xbindkeys && xbindkeys​
+```perl
+killall xbindkeys && xbindkeys​
 ```
 
 The script was written for Xubuntu but should work with any DE. In Xubuntu it filters out other workspaces, which doesn't work with Compiz. Am not sure about Metacity.

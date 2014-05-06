@@ -33,7 +33,7 @@ notify-send -i $icon "Lid action changed" "to $message."
 Be sure to check the icon and/or the messages written in the notification to fit your theme nicely. Save the script, `chmod +x` it and assign a keyboard shortcut, i.e. with `xbindkeys`:
 
 ```
-"/home/petr/scripts/change_lid_action.sh"
+"~/scripts/change_lid_action.sh"
 	Mod4 + F12
 ```
 

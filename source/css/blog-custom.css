@@ -6220,9 +6220,7 @@ body,
 .col-md-10 {
   min-width: 320px;
 }
-#m-col,
-#m-sub-col,
-#m-header {
+.col-md-10 {
   float: none;
   margin: 0 auto;
 }
@@ -6239,14 +6237,85 @@ body,
   padding-top: 13.333333333333334px;
   padding-bottom: 26.666666666666668px;
 }
+#m-header > .row {
+  position: relative;
+}
+#m-header #m-search {
+  margin-top: -14px;
+  text-align: right;
+}
+@media screen and (min-width: 768px) {
+  #m-header #m-search {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 0;
+    bottom: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  #m-header #m-search {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
+#m-header #m-search,
+#m-header #m-search #m-search-input {
+  line-height: 28px;
+  height: 28px;
+}
+#m-header #m-search #m-search-input {
+  width: 100%;
+  border: 1px solid #cccccc;
+  padding: 0 7px;
+  margin: -1px;
+  background: white;
+  text-align: center;
+}
+#m-header #m-search #m-search-input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 5px #bfbfbf;
+  box-shadow: 0 0 5px #bfbfbf;
+}
+#m-footer {
+  padding-bottom: 13.333333333333334px;
+}
+#m-footer ul {
+  padding-left: 0;
+  list-style: none;
+  padding-top: 26.666666666666668px;
+  border-top: 1px dashed #999999;
+}
+#m-footer ul:before,
+#m-footer ul:after {
+  content: " ";
+  display: table;
+}
+#m-footer ul:after {
+  clear: both;
+}
+#m-footer ul:before,
+#m-footer ul:after {
+  content: " ";
+  display: table;
+}
+#m-footer ul:after {
+  clear: both;
+}
+#m-footer ul li {
+  display: block;
+  float: left;
+}
+#m-footer ul #m-portfolio-link {
+  float: right;
+}
 .m-site-name {
   font-size: 28px;
-  line-height: 40px;
+  line-height: 28px;
   font-family: TeXGyreAdventorBold, Arial, Helvetica, sans-serif;
   font-weight: bold;
   display: block;
   margin: 0;
-  padding: 0;
 }
 .m-site-name > a {
   text-decoration: none;
@@ -6260,6 +6329,10 @@ body,
 .m-site-name small,
 .m-site-name small a {
   color: #999999;
+}
+#m-portfolio-link a {
+  padding-right: 15px;
+  background: url(../images/external.png) center right no-repeat;
 }
 h1 {
   font-size: 24.5px;
@@ -6564,6 +6637,14 @@ code {
 pre {
   margin: 0;
   padding: 20px;
+}
+pre.highlight.perl > *,
+pre.highlight.perl {
+  color: #333;
+}
+pre.highlight.perl:before {
+  content: 'user@host:~$ ';
+  color: #777;
 }
 pre + p {
   padding-top: 13.333333333333334px;

@@ -14,7 +14,7 @@
 			<li>tagged as</li>
 			<% for tag in article.tags %>
 				<li>
-					<%= link_to tag, tag_path(tag) %><% if article.tags.last != tag %>,<% end %>
+					<a href="/#<%= tag %>" class="m-article-tag-link" data-tag="<%= tag %>"><%= tag %></a><% if article.tags.last != tag %>,<% end %>
 				</li>
 			<% end %>
 		</ul>
