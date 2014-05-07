@@ -6369,6 +6369,12 @@ article#m-col p a[href^="/articles/images"]:hover {
     margin-bottom: 0;
   }
 }
+article#m-col p a {
+  text-decoration: underline;
+}
+article#m-col p a:hover {
+  text-decoration: none;
+}
 article header h1,
 article header h2 {
   margin: 0;
