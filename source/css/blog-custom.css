@@ -6308,6 +6308,9 @@ body,
 }
 #m-footer ul #m-portfolio-link {
   float: right;
+  margin-left: 13.333333333333334px;
+  padding-left: 13.333333333333334px;
+  border-left: 1px dashed #999999;
 }
 .m-site-name {
   font-size: 28px;
