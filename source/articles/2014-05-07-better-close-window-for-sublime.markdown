@@ -5,7 +5,7 @@ category: sublime text 2
 tags: sublime text 2
 ---
 
-I got fed up with sublime opening the last project and a new window when closed and being launched. This super-simple plugin offers a single better_close_window command, which closes the project and then the window./////
+I got fed up with sublime opening the last project and a new window when closed and being launched. This super-simple plugin offers a single `better_close_window` command, which closes the project and then the window./////
 
 The plugin overrides the default `close_window` shortcut (that's `ctrl+shift+w` on Win/Linux and `super+shift+w` on OSX).
 

@@ -183,29 +183,36 @@ article {
 
 // Code highlighting
 @import "vendor/code-highlight.less";
-pre, code {
-	background: #eee;
-	border: 1px solid #ccc;
-}
-code {
-	display: inline-block;
-	padding: 1px 2px;
-	font-size: 0.9em;
-	vertical-align: middle;
-}
-pre {
-	margin: 0;
-	padding: @bl;
-	&.highlight.perl {
-		> *, & {
-			color: #333;
-		} 
-		&:before {
-			content: 'user@host:~$ ';
-			color: #777;
-		}
+div#m-col {
+	pre, code {
+		font-family: inherit;
 	}
-	& + p {
-		padding-top: @bs;
+}
+article#m-col {
+	pre, code {
+		background: #eee;
+		border: 1px solid #ccc;
+	}
+	code {
+		display: inline-block;
+		padding: 1px 2px;
+		font-size: 0.9em;
+		vertical-align: middle;
+	}
+	pre {
+		margin: 0;
+		padding: @bl;
+		&.highlight.perl {
+			> *, & {
+				color: #333;
+			} 
+			&:before {
+				content: 'user@host:~$ ';
+				color: #777;
+			}
+		}
+		& + p {
+			padding-top: @bs;
+		}
 	}
 }

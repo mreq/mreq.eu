@@ -6632,29 +6632,33 @@ div[class*="col-"] {
   color: #999;
   background-color: #EAF2F5;
 }
-pre,
-code {
+div#m-col pre,
+div#m-col code {
+  font-family: inherit;
+}
+article#m-col pre,
+article#m-col code {
   background: #eee;
   border: 1px solid #ccc;
 }
-code {
+article#m-col code {
   display: inline-block;
   padding: 1px 2px;
   font-size: 0.9em;
   vertical-align: middle;
 }
-pre {
+article#m-col pre {
   margin: 0;
   padding: 20px;
 }
-pre.highlight.perl > *,
-pre.highlight.perl {
+article#m-col pre.highlight.perl > *,
+article#m-col pre.highlight.perl {
   color: #333;
 }
-pre.highlight.perl:before {
+article#m-col pre.highlight.perl:before {
   content: 'user@host:~$ ';
   color: #777;
 }
-pre + p {
+article#m-col pre + p {
   padding-top: 13.333333333333334px;
 }
