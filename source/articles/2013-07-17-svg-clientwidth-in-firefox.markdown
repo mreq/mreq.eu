@@ -11,19 +11,19 @@ Each element "hidden" in `<defs>` will have a zero `clientWidth`, `clientTop` et
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-	width="100%" height="100%" xlink="http://www.w3.org/1999/xlink">
-	<ellipse
-		id="IdoHaveClientWidth"
-		rx="10%" ry="20%" cx="50%" cy="55%">
-	</ellipse>
-	<defs>
-		<mask>
-			<ellipse
-				id="IhaveNoClientWidth"
-				rx="10%" ry="20%" cx="50%" cy="55%">
-			</ellipse>
-		</mask>
-	</defs>
+  width="100%" height="100%" xlink="http://www.w3.org/1999/xlink">
+  <ellipse
+    id="IdoHaveClientWidth"
+    rx="10%" ry="20%" cx="50%" cy="55%">
+  </ellipse>
+  <defs>
+    <mask>
+      <ellipse
+        id="IhaveNoClientWidth"
+        rx="10%" ry="20%" cx="50%" cy="55%">
+      </ellipse>
+    </mask>
+  </defs>
 </svg>
 ```
 

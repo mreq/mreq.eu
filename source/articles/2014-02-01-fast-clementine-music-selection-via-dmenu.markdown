@@ -25,26 +25,26 @@ Save the following script (I named it `clementine_play_folder.sh`) and `chmod +x
 flag=$1
 
 function handleSelection {
-	if [[ $1 ]]; then
-		folder=$1
-		if [ $flag == 'append' ]; then
-			msg="Appended songs"
-		else
-			msg="Loaded songs"
-		fi
-		
-		notify-send -i clementine "$msg" "$folder"
-		if [ $flag == 'load' ]; then clementine --stop; fi
-		clementine --$flag "/home/$( whoami )/Music/$folder"
-		if [ $flag == 'load' ]; then clementine --play; fi
+  if [[ $1 ]]; then
+    folder=$1
+    if [ $flag == 'append' ]; then
+      msg="Appended songs"
+    else
+      msg="Loaded songs"
+    fi
+    
+    notify-send -i clementine "$msg" "$folder"
+    if [ $flag == 'load' ]; then clementine --stop; fi
+    clementine --$flag "/home/$( whoami )/Music/$folder"
+    if [ $flag == 'load' ]; then clementine --play; fi
 
-	fi
-	exit 0
+  fi
+  exit 0
 }
 
 # If clementine's not running, start it!
 if ! pgrep -x clementine >/dev/null; then
-	clementine &
+  clementine &
 fi
 
 handleSelection "$( cd /home/$( whoami )/Music; ls -d */* | dmenu_custom )"
@@ -66,10 +66,10 @@ clementine_play_folder.sh append
 
 To set a global keyboard shortcut, I used `xbindkeys`. Relevant part of my `.xbindkeysrc`:
 
-	"~/scripts/clementine_play_folder.sh load"
-		Mod4 + m
+  "~/scripts/clementine_play_folder.sh load"
+    Mod4 + m
 
-	"~/scripts/clementine_play_folder.sh append"
-		Mod4 + Shift + m
+  "~/scripts/clementine_play_folder.sh append"
+    Mod4 + Shift + m
 
 That's all folks, enjoy :)

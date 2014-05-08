@@ -12,16 +12,16 @@ If you need to change the lid close action now and then a don't like clicking th
 state=`xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-ac`
 
 if [ $state -eq 0 ]
-	then
-		# is set to do nothing -> set to suspend
-		target=1
-		message="suspend"
-		icon="lock"
-	else
-		# is set to suspend -> set to do nothing
-		target=0
-		message="do nothing"
-		icon="window-close"
+  then
+    # is set to do nothing -> set to suspend
+    target=1
+    message="suspend"
+    icon="lock"
+  else
+    # is set to suspend -> set to do nothing
+    target=0
+    message="do nothing"
+    icon="window-close"
 fi
 
 xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-ac -s $target
@@ -34,7 +34,7 @@ Be sure to check the icon and/or the messages written in the notification to fit
 
 ```
 "~/scripts/change_lid_action.sh"
-	Mod4 + F12
+  Mod4 + F12
 ```
 
 Enjoy!

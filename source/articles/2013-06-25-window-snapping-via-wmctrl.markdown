@@ -37,10 +37,10 @@ half=$(( $width/2 ))
 wmctrl -r :ACTIVE: -b remove,maximized_horz,shaded &
 
 if [[ $1 == 'left' ]]
-	then
-		wmctrl -r :ACTIVE: -b add,maximized_vert -e 0,0,24,$half,-1 &
-	else
-		wmctrl -r :ACTIVE: -b add,maximized_vert -e 0,$half,24,$half,-1 &
+  then
+    wmctrl -r :ACTIVE: -b add,maximized_vert -e 0,0,24,$half,-1 &
+  else
+    wmctrl -r :ACTIVE: -b add,maximized_vert -e 0,$half,24,$half,-1 &
 fi
 
 exit 0
@@ -63,10 +63,10 @@ With `xbindkeys` installed it's easy to assign shortcuts, like so:
 
 ```
 "~/scripts/bin/wmctrl_snap_window left"
-	Mod4 + Left
+  Mod4 + Left
 
 "~/scripts/bin/wmctrl_snap_window right"
-	Mod4 + Right
+  Mod4 + Right
 ```
 
 That's it. I've also created a wmctrl script which resizes the active

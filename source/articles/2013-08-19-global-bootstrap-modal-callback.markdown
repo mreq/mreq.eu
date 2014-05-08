@@ -10,7 +10,7 @@ If you are in need of a global callback for bootstrap modal, you can use the fir
 ```coffee
 # coffee
 $('body').on 'show', '> .modal', ->
-	console.log 'Modal is being shown.'
+  console.log 'Modal is being shown.'
 ```
 
 or plain javascript:
@@ -18,7 +18,7 @@ or plain javascript:
 ```js
 // js
 $('body').on('show', '> .modal', function() {
-	console.log('Modal is being shown.');
+  console.log('Modal is being shown.');
 });
 ```
 

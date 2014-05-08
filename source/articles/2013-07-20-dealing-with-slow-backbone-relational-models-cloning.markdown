@@ -11,15 +11,15 @@ If you do clone elements using `toJSON` method, be sure to specify `includeInJSO
 
 ```coffee
 relations: [
-	{
-		type: Backbone.HasOne
-		key: 'fieldInstance'
-		relatedModel: 'App.M.FieldInstance'
-		reverseRelation:
-			includeInJSON: false
-			type: Backbone.HasOne
-			key: 'fieldInstanceImage'
-	}
+  {
+    type: Backbone.HasOne
+    key: 'fieldInstance'
+    relatedModel: 'App.M.FieldInstance'
+    reverseRelation:
+      includeInJSON: false
+      type: Backbone.HasOne
+      key: 'fieldInstanceImage'
+  }
 ]
 ```
 
