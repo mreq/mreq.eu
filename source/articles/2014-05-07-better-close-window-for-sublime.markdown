@@ -1,6 +1,6 @@
 ---
 title: Better close window command for Sublime Text 2
-slug: 2014-05-07-better-close-window-for-sublime
+slug: better-close-window-for-sublime
 category: sublime text 2
 tags: sublime text 2
 ---
