@@ -20,7 +20,7 @@ What it actually does is that it switches to the spotify client, clicks the butt
 
 ## Drawbacks
 
-You have to run spotify maximized. Also you might need to tweak the `$y` variable as this one assumes you have a top panel bar.
+You might need to tweak the `$y` variable as this one assumes you have a top panel bar.
 
 ## Installation
 
@@ -55,7 +55,7 @@ if [[ $( wmctrl -lx |  grep spotify.Spotify ) ]]; then
     xdotool mousemove $x $y click 1 mousemove restore
   else
     # Switch to spotify
-    wmctrl -iR $id
+    wmctrl -iR $id -b add,maximized_vert,maximized_horz
     # Click on the relevant button
     xdotool mousemove $x $y click 1 mousemove restore
     # Alt+tab back to what we were doing
