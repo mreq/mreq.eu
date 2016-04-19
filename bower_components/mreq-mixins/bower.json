@@ -1,0 +1,9 @@
+{
+  "name": "mreq-mixins",
+  "version": "0.0.6",
+  "ignore": [],
+  "main": [
+    "mreq.sass"
+  ],
+  "dependencies": {}
+}

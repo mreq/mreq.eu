@@ -1,0 +1,20 @@
+{
+  "name": "mreq-mixins",
+  "version": "0.0.6",
+  "ignore": [],
+  "main": [
+    "mreq.sass"
+  ],
+  "dependencies": {},
+  "homepage": "https://github.com/mreq/stylesheet-mixins",
+  "_release": "0.0.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.6",
+    "commit": "f3e9d4895a055d38a6b41a15e443ebd408751487"
+  },
+  "_source": "https://github.com/mreq/stylesheet-mixins.git",
+  "_target": "^0.0.6",
+  "_originalSource": "mreq-mixins",
+  "_direct": true
+}

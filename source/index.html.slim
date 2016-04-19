@@ -1,0 +1,11 @@
+---
+show_search: true
+is_index: true
+---
+
+.m-article-list
+  - blog.articles.each do |article|
+    article
+      = partial 'layouts/article-header', locals: { article: article, link_title: true, heading: 'h2' }
+      .m-summary
+        = article.summary

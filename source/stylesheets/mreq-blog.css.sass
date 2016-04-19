@@ -1,0 +1,241 @@
+$gray-dark: #333
+$gray-light: #999
+$text-color: $gray-dark
+$link-color: $text-color
+$input-color-placeholder: $gray-light
+
+@import 'bootstrap-custom'
+// @import 'fonts'
+@import 'code-highlight'
+@import '../../bower_components/mreq-mixins/mreq'
+
+// // Plugins
+// @import "vendor/magnific-popup.less"
+
+// Variables
+$bs: 2*$bl/3
+$gray: #999
+
+// =ff
+//   font-family: 'TeXGyreAdventorRegular', Arial, Helvetica, sans-serif
+
+// =ff-b
+//   font-family: 'TeXGyreAdventorBold', Arial, Helvetica, sans-serif
+
+html
+  overflow-y: scroll
+
+html, body, .container, .row, .col-md-10
+  min-width: 320px
+
+.col-md-10
+  float: none
+  margin: 0 auto
+
+#m-sub-row
+  padding: 3*$bs
+
+.m-article-list
+  .m-article-tag-name
+    margin: 0 0 2*$bs
+
+  article
+    margin: 0 0 3*$bs
+
+
+#m-header
+  padding-top: $bs
+  padding-bottom: 2*$bs
+  > .row
+    position: relative
+
+  #m-search
+    @media screen and (min-width: $screen-sm-min)
+      +topright(50%, 0)
+
+    @media screen and (max-width: $screen-sm-min)
+      padding-top: $bf
+      padding-bottom: $bf
+
+    margin-top: -$bf
+    text-align: right
+    &, #m-search-input
+      line-height: 2*$bf
+      height: 2*$bf
+
+    #m-search-input
+      width: 100%
+      border: 1px solid lighten($gray, 20%)
+      padding: 0 $bf/2
+      margin: -1px
+      background: white
+      text-align: center
+      &:focus
+        outline: none
+        +box-shadow(0 0 5px lighten($gray, 15%))
+
+
+
+
+#m-footer
+  padding-bottom: $bs
+  ul
+    +clearfix
+    +ul
+    padding-top: 2*$bs
+    border-top: 1px dashed $gray
+    li
+      display: block
+      float: right
+      margin-left: 1em
+      a
+        padding-left: 1em
+        display: inline-block
+      &:before
+        content: ':'
+        display: inline-block
+      &:first-child
+        float: left
+      &:first-child, &:last-child
+        &:before
+          display: none
+
+// Typography
+.m-site-name
+  +fsize(2*$bf, 2*$bf)
+  // +ff-b
+  font-weight: bold
+  display: block
+  margin: 0
+  // padding: 0
+  > a
+    text-decoration: none
+
+  small
+    font-family: Arial, Helvetica, sans-serif
+    font-weight: normal
+    +fsize($bf, 2*$bl)
+    &, a
+      color: $gray
+
+
+
+#m-portfolio-link a
+  padding-right: 15px
+  background: url(../images/external.png) center right no-repeat
+
+h1
+  +fsize(1.75*$bf)
+
+h2
+  +fsize(1.5*$bf)
+
+article#m-col
+  p
+    margin-bottom: $bs
+    a[href^="/articles/images"]
+      display: inline-block
+      +transition(opacity 0.5s)
+      &:hover
+        +opacity(0.85)
+
+      @media screen and (min-width: 480px)
+        & + a[href^="/articles/images"]
+          margin-left: $bs
+
+
+      @media screen and (max-width: 480px)
+        margin-bottom: $bs
+        display: block
+        text-align: center
+        &:last-child
+          margin-bottom: 0
+
+
+
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+
+
+
+article
+  header
+    h1, h2
+      margin: 0
+      line-height: 1em
+
+    h1, h2, .m-article-tags, .m-article-date
+      padding-bottom: $bs
+      .m-article-list &
+        padding-bottom: $bs/2
+
+
+    .m-article-tags, .m-article-date
+      &, a
+        color: $gray
+
+
+    .m-article-tags
+      margin-bottom: 0
+      li
+        display: inline-block
+        list-style: none
+        + li
+          &:before
+            content: ','
+            display: inline-block
+          a
+            padding-left: .25em
+        &:first-child + li
+          &:before
+            display: none
+
+
+      @media screen and (min-width: $screen-sm-min)
+        text-align: right
+
+
+
+
+
+// Width transitions
+.container, .row, div[class*="col-"]
+  +transition(width 0.5s)
+
+
+// Code highlighting
+div#m-col
+  pre, code
+    font-family: inherit
+
+
+article#m-col
+  pre, code
+    background: #eee
+    border: 1px solid #ccc
+
+  code
+    display: inline-block
+    padding: 1px 2px
+    font-size: 0.9em
+    vertical-align: middle
+
+  pre
+    margin: 0
+    padding: $bl
+    &.highlight.perl
+      > *, &
+        color: #333
+
+      &:before
+        content: 'user$host:~$ '
+        color: #777
+
+
+    & + p
+      padding-top: $bs
+
+

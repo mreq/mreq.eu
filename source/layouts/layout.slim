@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    = partial 'layouts/head'
+
+  body
+    #m-container
+      = partial 'layouts/page_header'
+
+      #m-row.row
+        #m-col.col-md-10
+          = yield
+
+      = partial 'layouts/page_footer'
+

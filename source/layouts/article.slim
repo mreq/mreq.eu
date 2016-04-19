@@ -1,0 +1,22 @@
+---
+is_article: true
+---
+doctype html
+html
+  head
+    = partial 'layouts/head'
+
+  body
+    #m-container
+      = partial 'layouts/page_header'
+
+      section#m-row.row
+        article#m-col.col-md-10
+          = partial 'layouts/article-header', locals: { article: current_article, link_title: false, heading: 'h1' }
+          = yield
+
+      aside#m-sub-row.row
+        #m-sub-col.col-md-10
+          = partial 'layouts/disqus'
+
+      = partial 'layouts/page_footer'

@@ -1,6 +1,6 @@
 #!/bin/bash
 sh bin/generate_thumbnails
-bundle exec middleman build
+sh bin/build
 rm -rf build/tagged
 rsync -avz build/ mreq:php/mreq
 

@@ -1,0 +1,17 @@
+.row
+  header#m-header.col-md-10
+    .row
+      - heading_tag = current_page.data.is_index ? 'h1' : 'strong'
+      *{tag: heading_tag} class="m-site-name col-sm-9"
+          a<> href="/" mreq
+          small
+            ' a blog about
+            a.m-tag-name< href="/#ubuntu" ubuntu
+            ' ,
+            a.m-tag-name<> href="/#sublime" sublime text
+            ' and the
+            a.m-tag-name<> href="/#web" web
+
+      - if current_page.data.show_search
+        #m-search.col-sm-3
+          input#m-search-input placeholder="filter by tag / title" type="text"
