@@ -13,6 +13,23 @@ end
 
 page '/feed.xml', layout: false
 
+helpers do
+  def meta_description
+    'a blog about ubuntu, sublime text and the web'
+  end
+
+  def link_to_github_article(current_article)
+    url = [
+      'https://github.com/mreq/mreq.eu/blob/master/source/articles/',
+      current_article.date.year, '-',
+      '%02d' % current_article.date.month, '-',
+      '%02d' % current_article.date.day, '-',
+      current_article.slug, '.html.md'
+    ].join('')
+    link_to 'fork this article on github', url, target: '_blank'
+  end
+end
+
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 

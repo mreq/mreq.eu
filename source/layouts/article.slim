@@ -16,10 +16,7 @@ html
           = yield
 
         footer#m-fork-on-github
-          a(
-            href="https://github.com/mreq/mreq.eu/blob/master/source/articles/#{current_article.date.year}-#{'%02d' % current_article.date.month}-#{'%02d' % current_article.date.day}-#{current_article.slug}.html.md"
-            target="_blank"
-          ) fork this article on github
+          = link_to_github_article(current_article)
 
       aside#m-sub-row
         #m-sub-col
