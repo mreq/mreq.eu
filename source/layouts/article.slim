@@ -15,6 +15,12 @@ html
           = partial 'layouts/article-header', locals: { article: current_article, link_title: false, heading: 'h1' }
           = yield
 
+        footer#m-fork-on-github
+          a(
+            href="https://github.com/mreq/mreq.eu/blob/master/source/articles/#{current_article.date.year}-#{'%02d' % current_article.date.month}-#{'%02d' % current_article.date.day}-#{current_article.slug}.html.md"
+            target="_blank"
+          ) fork this article on github
+
       aside#m-sub-row
         #m-sub-col
           = partial 'layouts/disqus'
