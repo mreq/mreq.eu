@@ -4,11 +4,11 @@ html
     = partial 'layouts/head'
 
   body
-    #m-container
+    #m-container.container
       = partial 'layouts/page_header'
 
-      #m-row.row
-        #m-col.col-md-10
+      #m-row
+        #m-col
           = yield
 
       = partial 'layouts/page_footer'

@@ -1,17 +1,21 @@
-.row
-  header#m-header.col-md-10
-    .row
-      - heading_tag = current_page.data.is_index ? 'h1' : 'strong'
-      *{tag: heading_tag} class="m-site-name col-sm-9"
-          a<> href="/" mreq
-          small
-            ' a blog about
+header#m-header
+  .row
+    - heading_tag = current_page.data.is_index ? 'h1' : 'strong'
+    *{tag: heading_tag} class="m-site-name col-sm-9"
+        a<> href="/" mreq
+        small
+          ' a blog
+          span.hidden-xs
+            ' about
             a.m-tag-name< href="/#ubuntu" ubuntu
             ' ,
             a.m-tag-name<> href="/#sublime" sublime text
             ' and the
             a.m-tag-name<> href="/#web" web
 
-      - if current_page.data.show_search
-        #m-search.col-sm-3
-          input#m-search-input placeholder="filter by tag / title" type="text"
+    - if current_page.data.show_search
+      #m-search.col-sm-3
+        input#m-search-input placeholder="filter by tag / title" type="text"
+    - else
+      .m-articles-link.col-sm-3.hidden-xs
+        a href="/" &larr; back to articles

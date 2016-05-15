@@ -1,5 +1,5 @@
 ---
-title: Installing bda R package on Ubuntu
+title: Installing the bda R package on Ubuntu
 slug: r-bda-package
 category: ubuntu
 tags: ubuntu, R

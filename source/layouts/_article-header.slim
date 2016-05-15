@@ -7,13 +7,13 @@ header.m-article-header
     - else
       = article.title
 
-  .row
+  .m-article-meta.row
     .m-article-date.col-sm-4
       | posted on #{article.date.strftime '%d/%m/%Y'}
     ul.m-article-tags.col-sm-8
       li
         | tagged
       - article.tags.each do |tag|
-        li
+        li<>
           a.m-article-tag-link data-tag=tag href="/##{tag}"
             = tag

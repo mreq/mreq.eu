@@ -66,10 +66,12 @@ clementine_play_folder.sh append
 
 To set a global keyboard shortcut, I used `xbindkeys`. Relevant part of my `.xbindkeysrc`:
 
-  "~/scripts/clementine_play_folder.sh load"
-    Mod4 + m
+```
+"~/scripts/clementine_play_folder.sh load"
+  Mod4 + m
 
-  "~/scripts/clementine_play_folder.sh append"
-    Mod4 + Shift + m
+"~/scripts/clementine_play_folder.sh append"
+  Mod4 + Shift + m
+```
 
 That's all folks, enjoy :)
