@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+require 'highline'
+
+date = Time.now
+cli = HighLine.new
+
+title = cli.ask 'Article title:'
+fail 'Needs a title.' if title.empty?
+
+auto_slug = title.downcase.strip.tr(' ', '-').gsub(/[^\w-]/, '')
+slug = cli.ask "Article slug (leave blank for '#{auto_slug}'):"
+slug = auto_slug if slug.empty?
+
+category = cli.ask 'Article category:'
+fail 'Needs a category.' if category.empty?
+
+tags = cli.ask 'Article tags (commma separated):'
+fail 'Needs tags.' if tags.empty?
+
+file_name = "source/articles/#{date.year}-#{'%02d' % date.month}-#{'%02d' % date.day}-#{slug}.html.md"
+
+puts [
+  'Creating an article:',
+  "Title: #{title}",
+  "Slug: #{slug}",
+  "Category: #{category}",
+  "Tags: #{tags}",
+  '',
+  "File name: #{file_name}"
+].join("\n")
+
+ok = cli.ask 'Is that ok?'
+if ok =~ /n/i
+  puts 'Not doing anything then.'
+  exit
+end
+
+content = %(
+---
+title: #{title}
+slug: #{slug}
+category: #{category}
+tags: #{tags}
+---
+
+).lstrip
+
+File.open(file_name, 'w') { |file| file.write(content) }

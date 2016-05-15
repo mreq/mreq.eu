@@ -48,6 +48,7 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.4.3)
+    highline (1.7.8)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     json (1.8.3)
@@ -152,6 +153,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-script (~> 2.4.1)
+  highline
   middleman (~> 4.1.7)
   middleman-blog (~> 4.0.1)
   middleman-livereload (~> 3.4.6)
@@ -161,3 +163,6 @@ DEPENDENCIES
   redcarpet (~> 3.3.4)
   sass (~> 3.4.22)
   slim (~> 3.0.6)
+
+BUNDLED WITH
+   1.12.3
