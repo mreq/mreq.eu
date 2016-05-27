@@ -82,6 +82,12 @@ initSearch = ->
     $('#m-header').on 'click', '.m-tag-name', ->
       handleHash $(this).data('tag')
 
+initRemoteCode = ->
+  $('pre').filter('[data-remote]').each ->
+    $this = $(this)
+    $this.load $this.data('remote')
+
 $ ->
   initLightbox()
   initSearch()
+  initRemoteCode()
