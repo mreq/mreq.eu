@@ -19,6 +19,8 @@ end
 ```ruby
 # app/models/page.rb
 class Page < ActiveRecord::Base
+  belongs_to :category
+
   has_many :content_parts,
            -> { where(contentable_type: 'Contentable') },
            dependent: :destroy,
