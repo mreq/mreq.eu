@@ -13,7 +13,8 @@ html
       section#m-row
         article#m-col.m-article
           = partial 'layouts/article-header', locals: { article: current_article, link_title: false, heading: 'h1' }
-          = yield
+          .m-article-content
+            = yield
 
         footer#m-fork-on-github
           = link_to_github_article(current_article)

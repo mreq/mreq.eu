@@ -1,5 +1,6 @@
 //= require slick-carousel/slick/slick
 //= require slick-lightbox/dist/slick-lightbox
+//= require highlightjs/styles/github
 
 $gray-dark: #333
 $gray-light: #999
@@ -15,7 +16,6 @@ $container-desktop: 900px + $grid-gutter-width
 $container-large-desktop: $container-desktop
 
 @import 'bootstrap-custom'
-@import 'code-highlight'
 @import '../../bower_components/mreq-mixins/mreq'
 
 =article-page
@@ -31,6 +31,10 @@ html, body, .container
 pre
   margin: 0 0 $bl/2
   padding: $grid-gutter-half
+  position: relative
+  code.hljs
+    padding: 0
+    background: transparent
   &.highlight.perl
     code
       > *, &
@@ -48,6 +52,7 @@ code[data-gist-id]
   font-weight: bold
   font-size: 28px
   margin: 0
+  min-height: 40px
   > a
     text-decoration: none
   small
@@ -56,6 +61,9 @@ code[data-gist-id]
     line-height: 35px
     &, a
       color: $gray-light
+  +article-page
+    position: relative
+    top: -1px
   +mq-xs
     text-align: center
     padding-bottom: 5px
@@ -84,14 +92,14 @@ code[data-gist-id]
   margin-bottom: 7px
   &, a
     color: $gray-light
-  +article-page
-    margin-bottom: $grid-gutter-half
 
 .m-article-heading
   margin: $grid-gutter-width 0 7px
   +article-page
-    margin-top: 0
-    margin-bottom: 10px
+    @extend .h2
+    margin: $grid-gutter-width 0 7px
+    +mq-xs
+      margin-top: 0
 
 .m-article
   margin-bottom: $grid-gutter-width
@@ -101,6 +109,37 @@ code[data-gist-id]
         display: inline-block
         margin: $bl/2 $bl/2 $bl/2 0
 
+.m-article-content, .m-summary
+  a
+    border-bottom: 1px dotted $text-color
+    white-space: nowrap
+    &:hover
+      text-decoration: none
+      border-color: transparent
+  .m-fork-gist
+    +topright
+    display: block
+    text-decoration: none
+    border-bottom: 0
+    &:before
+      +transition(border-color .15s)
+      content: ''
+      display: block
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 0 50px 50px 0
+      border-color: transparent #ccc transparent transparent
+    &:after
+      +sq(14px)
+      +topright(8px, 6px)
+      content: ''
+      display: block
+      background: image-url('octicon-gist-fork.png') 0 0 no-repeat
+    &:hover
+      &:before
+        border-color: transparent lighten(#ccc, 5%) transparent transparent
+
 .slick-lightbox .slick-lightbox-inner .slick-lightbox-slick .slick-lightbox-slick-item .slick-lightbox-slick-item-inner .slick-lightbox-slick-caption
   color: $text-color
 
@@ -108,8 +147,10 @@ code[data-gist-id]
   padding: $grid-gutter-half 0 0
   margin-bottom: $grid-gutter-width
   line-height: 35px
+  min-height: 55px
   +article-page
-    margin-bottom: 5px
+    +mq-xs
+      margin-bottom: 5px
 
 #m-search
   padding: 4px 0 0

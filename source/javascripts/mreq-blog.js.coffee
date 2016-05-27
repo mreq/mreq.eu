@@ -3,6 +3,7 @@
 #= require backbone/backbone
 #= require slick-carousel/slick/slick.js
 #= require slick-lightbox/dist/slick-lightbox.js
+#= require highlightjs/highlight.pack.js
 
 initLightbox = ->
   return unless $('body').hasClass('m-article-page')
@@ -83,9 +84,15 @@ initSearch = ->
       handleHash $(this).data('tag')
 
 initRemoteCode = ->
-  $('pre').filter('[data-remote]').each ->
+  $('pre code').not('[data-remote]').each ->
+    hljs.highlightBlock this
+
+  $('pre code').filter('[data-remote]').each ->
     $this = $(this)
-    $this.load $this.data('remote')
+    url = $this.data('remote')
+    $this.load "#{url}/raw", =>
+      hljs.highlightBlock this
+      $this.after("""<a class="m-fork-gist" href="#{url}" target="_blank"></a>""")
 
 $ ->
   initLightbox()

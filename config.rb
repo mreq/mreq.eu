@@ -30,8 +30,18 @@ helpers do
   end
 end
 
+class CustomMarkdownRenderer < Redcarpet::Render::HTML
+  def initialize(extensions = {})
+    super extensions.merge(link_attributes: { target: '_blank' })
+  end
+
+  def block_code(code, language)
+    %(<pre><code class="#{language}">#{code}</code></pre>)
+  end
+end
+
 set :markdown_engine, :redcarpet
-set :markdown, fenced_code_blocks: true, smartypants: true
+set :markdown, fenced_code_blocks: true, smartypants: true, renderer: CustomMarkdownRenderer
 
 activate :syntax
 activate :sprockets
