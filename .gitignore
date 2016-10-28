@@ -21,3 +21,5 @@
 
 # Thumbnails
 /source/articles/images/thumbs
+
+/nginx.conf

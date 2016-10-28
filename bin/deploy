@@ -2,6 +2,6 @@
 sh bin/generate_thumbnails && \
 sh bin/build && \
 rm -rf build/tagged && \
-rsync -avz build/ mreq:php/mreq --delete
+rsync -avz build/ mreq:mreq.eu --delete
 
 notify-send -u low -i emblem-default 'mreq-blog' 'Changes rsynced.'
