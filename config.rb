@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 configure :development do
   activate :livereload
 end
@@ -41,7 +42,9 @@ class CustomMarkdownRenderer < Redcarpet::Render::HTML
 end
 
 set :markdown_engine, :redcarpet
-set :markdown, fenced_code_blocks: true, smartypants: true, renderer: CustomMarkdownRenderer
+set :markdown, fenced_code_blocks: true,
+               smartypants: true,
+               renderer: CustomMarkdownRenderer
 
 activate :syntax
 activate :sprockets

@@ -1,0 +1,24 @@
+@import 'reset-css/reset'
+
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+$font-family-code: Consolas, "Liberation Mono", Menlo, Courier, monospace
+
+$grid-gutter-width: 30px
+$grid-gutter-half: (( $grid-gutter-width / 2 ))
+
+html
+  overflow-y: scroll
+
+body
+  font-size: 20px
+  line-height: 1.5
+  font-family: $font-family
+  min-width: 320px
+
+code
+  font-family: $font-family-code
+
+.m-container
+  margin: 0 auto
+  padding: 0 $grid-gutter-half
+  max-width: 930px

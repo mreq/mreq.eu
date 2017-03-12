@@ -1,11 +1,12 @@
----
-show_search: true
-is_index: true
----
+/ ---
+/ show_search: true
+/ is_index: true
+/ ---
 
-.m-article-list
+section.m-articles
   - blog.articles.each do |article|
-    article.m-article
-      = partial 'layouts/article-header', locals: { article: article, link_title: true, heading: 'h2' }
-      .m-summary
-        = article.summary
+    = partial 'article-perex', locals: { article: article }
+    / article.m-article
+    /   = partial 'layouts/article-header', locals: { article: article, link_title: true, heading: 'h2' }
+    /   .m-summary
+    /     = article.summary

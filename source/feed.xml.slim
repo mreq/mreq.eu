@@ -1,9 +1,9 @@
 doctype xml
 rss version='2.0' xmlns:atom="http://www.w3.org/2005/Atom"
   channel
-    atom:link rel='self' type='application/rss+xml' href='http://mreq.eu/feed.xml'
-    title         = "mreq.eu"
-    link          = "http://mreq.eu/"
+    atom:link rel='self' type='application/rss+xml' href='http://www.mreq.eu/feed.xml'
+    title         = "www.mreq.eu"
+    link          = "http://www.mreq.eu/"
     description   = meta_description
     language      = "en-US"
     lastBuildDate = blog.articles.first.date.strftime("%a, %d %b %Y %H:%M:%S %z")
@@ -13,4 +13,4 @@ rss version='2.0' xmlns:atom="http://www.w3.org/2005/Atom"
         title       = article.title
         description = article.summary
         pubDate     = article.date.strftime("%a, %d %b %Y %H:%M:%S %z")
-        link        = "http://mreq.eu#{ article.url }"
+        link        = "http://www.mreq.eu#{ article.url }"
