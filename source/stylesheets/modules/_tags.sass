@@ -1,0 +1,14 @@
+.m-tag-ul
+  +ul
+
+.m-tag-li
+  display: inline-block
+
+  &:after
+    content: ','
+    display: inline-block
+    padding-right: 0.3em
+
+  &:last-child
+    &:after
+      display: none

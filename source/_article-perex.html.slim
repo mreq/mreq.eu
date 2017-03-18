@@ -5,5 +5,7 @@ article.m-article-perex
 
   small.m-article-meta
     span.m-article-date posted on #{article.date.strftime '%d/%m/%Y'}
-    ul.m-article-tags
+    = partial 'tags', locals: { tags: article.tags }
 
+  p.m-article-summary
+    = article.summary
