@@ -1,12 +1,22 @@
 .m-article-perex
-  margin: 0 0 50px
+  margin: 0
 
-  h2
-    font-weight: $bold
+  h1, h2
+    +f-semi-bold
+    font-size: $font-size-big
     margin: 0 0 10px
 
+  p, + .m-article-content p:first-child
+    &:after
+      content: ''
+      display: block
+      text-align: center
+      margin: 25px 0
+      height: 0
+      border-bottom: 1px dotted $border-color
+
 .m-article-link
-  display: block
+  display: inline-block
   border-bottom: 0
 
   &:visited
@@ -17,7 +27,7 @@
   font-size: $font-size-small
   display: flex
   justify-content: space-between
-  margin: 0 0 10px
+  margin: 0 0 13px
 
   &, a
     color: $font-color-light

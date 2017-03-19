@@ -1,11 +1,17 @@
+- heading = current_article ? 'h2' : 'h1'
+
 header.m-page-header
   .m-page-header-text
     a.m-page-header-title-link href="/"
-      - heading ||= 'h1'
       *{tag: heading} class="m-page-header-title" mreq
 
     em.m-page-header-description
-      ' a blog about <a href="#ubuntu">ubuntu</a>, <a href="#subl">sublime text</a> and the <a href="#web">web</a>
+      ' &hellip;a blog about <a href="#ubuntu">ubuntu</a>, <a href="#subl">sublime text</a> and the <a href="#web">web</a>
 
   form.m-page-header-form action="#"
-    input type="text" placeholder="filter by tag / title"
+    input(
+      id="m-input"
+      placeholder="filter by tag / title"
+      type="text"
+      required=true
+    )

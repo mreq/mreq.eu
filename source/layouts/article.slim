@@ -1,26 +1,22 @@
----
-is_article: true
----
 doctype html
-html
+html lang="en"
   head
-    = partial 'layouts/head'
+    = partial 'head'
 
-  body.m-article-page
-    #m-container.container
-      = partial 'layouts/page_header'
+  body
+    .m-container
+      = partial 'page-header'
 
-      section#m-row
-        article#m-col.m-article
-          = partial 'layouts/article-header', locals: { article: current_article, link_title: false, heading: 'h1' }
-          .m-article-content
-            = yield
+      article.m-article
+        = partial 'article-perex', locals: { article: current_article }
 
-        footer#m-fork-on-github
+        .m-article-content
+          = yield
+
+        footer.m-fork-on-github
           = link_to_github_article(current_article)
 
-      aside#m-sub-row
-        #m-sub-col
-          = partial 'layouts/disqus'
+      aside.m-disqus
+        = partial 'layouts/disqus'
 
-      = partial 'layouts/page_footer'
+      = partial 'page-footer'

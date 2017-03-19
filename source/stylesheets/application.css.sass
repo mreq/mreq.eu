@@ -1,5 +1,6 @@
 $font-size-base: 18px
 $font-size-small: 15px
+$font-size-big: 22px
 $font-size-logo: 30px
 
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
@@ -26,9 +27,25 @@ $screen-xs-max: 767px
   li
     list-style: none
 
+=mq-sm-up
+  @media screen and (min-width: #{$screen-xs-max + 1})
+    @content
+
 =mq-xs
   @media screen and (max-width: #{$screen-xs-max})
     @content
+
+=f-semi-bold
+  font-weight: 600
+  font-weight: 500
+
+=clearfix
+  &:before,
+  &:after
+    content: " "
+    display: table
+  &:after
+    clear: both
 
 html
   overflow-y: scroll
@@ -47,7 +64,7 @@ code
 a
   color: $link-color
   text-decoration: none
-  border-bottom: 1px dotted $link-color
+  border-bottom: 1px dotted black
 
   &:hover
     border-bottom-color: transparent
@@ -62,4 +79,5 @@ a
 
 @import 'modules/article-perex'
 @import 'modules/page-header'
+@import 'modules/page-footer'
 @import 'modules/tags'

@@ -1,16 +1,12 @@
 doctype html
-html
+html lang="en"
   head
-    title Slim Examples
-    meta name="keywords" content="template language"
-    meta name="author" content="Petr Marek"
-
-    meta content="width=device-width" name="viewport"
-
-    = stylesheet_link_tag 'application'
+    = partial 'head'
 
   body
     .m-container
       = partial 'page-header'
 
       = yield
+
+      = partial 'page-footer'

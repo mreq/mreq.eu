@@ -1,5 +1,6 @@
 .m-page-header
-  margin: 0 0 50px
+  padding: 20px 0
+  margin: 0 0 10px
   display: flex
   align-items: stretch
   justify-content: space-between
@@ -19,6 +20,7 @@
 .m-page-header-form
   display: flex
   align-items: center
+  position: relative
 
   input
     line-height: 35px
@@ -28,11 +30,20 @@
     color: $font-color
     font-size: $font-size-small
     display: block
+    text-align: center
+
+    &:valid
+      text-align: left
+
++mq-sm-up
+  .m-page-header-form
+    bottom: -5px
 
 +mq-xs
   .m-page-header
     flex-direction: column
     text-align: center
+    padding: 5px 0 0
     margin-bottom: 30px
 
   .m-page-header-title
