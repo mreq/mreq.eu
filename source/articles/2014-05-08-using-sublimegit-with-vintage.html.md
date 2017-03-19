@@ -5,7 +5,7 @@ category: sublime text
 tags: sublime text
 ---
 
-Sublimegit is great, but doesn't play well with Vintage./////
+Sublimegit is great, but doesn't play well with Vintage.
 
 If you're not familiar with [Sublimegit](https://sublimegit.net/), go check it out, it's amazing and integrates nicely with Sublime Text workflow. However, there is a caveat - named Vintage. Vintage's option `vintage_start_in_command_mode` (which I have set to `true`) makes opening the Git: Status rather unusable.
 

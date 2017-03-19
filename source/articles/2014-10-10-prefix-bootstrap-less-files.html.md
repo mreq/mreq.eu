@@ -5,7 +5,7 @@ category: web
 tags: web, bootstrap, npm
 ---
 
-I've created a simple npm tool to prefix bootstrap CSS classes./////
+I've created a simple npm tool to prefix bootstrap CSS classes.
 
 You can find the tool on the [npm website](https://www.npmjs.org/package/bootstrap-prefixer) or on [github](https://github.com/mreq/bootstrap-prefixer).
 

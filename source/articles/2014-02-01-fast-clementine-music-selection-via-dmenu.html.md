@@ -5,7 +5,7 @@ category: ubuntu
 tags: ubuntu, clementine, bash
 ---
 
-If you prefer keyboard over mouse like I do, you'll probably want a keyboard way of selecting music to be played./////
+If you prefer keyboard over mouse like I do, you'll probably want a keyboard way of selecting music to be played.
 
 We can use `dmenu` to go through our Music collection and make a auto-complete suggestion list to select Music from.
 

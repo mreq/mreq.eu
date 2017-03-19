@@ -5,7 +5,7 @@ end
 
 activate :blog do |blog|
   blog.permalink = '{year}/{month}/{slug}'
-  blog.summary_separator = '/////'
+  blog.summary_separator = "\n\n"
   blog.sources = 'articles/{year}-{month}-{day}-{slug}.html'
   blog.taglink = 'tagged/{tag}'
   blog.tag_template = 'tag.html'

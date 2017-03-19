@@ -5,7 +5,7 @@ category: ubuntu
 tags: ubuntu, R
 ---
 
-Installing the bda package in R fails by default on Ubuntu./////
+Installing the bda package in R fails by default on Ubuntu.
 
 When trying to install **bda** R package on Ubuntu, you've probably been greeted by
 

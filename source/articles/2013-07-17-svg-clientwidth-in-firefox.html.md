@@ -5,7 +5,7 @@ category: web
 tags: web, firefox, svg
 ---
 
-Be careful when playing with `clientWidth` and masking SVG elements./////
+Be careful when playing with `clientWidth` and masking SVG elements.
 
 Each element "hidden" in `<defs>` will have a zero `clientWidth`, `clientTop` etc. in Firefox.
 

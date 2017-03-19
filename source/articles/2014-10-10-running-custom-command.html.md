@@ -5,7 +5,7 @@ category: sublime text
 tags: sublime text
 ---
 
-Ever needed to run a command on currently editting file/folder? I've made a simple plugin to do just that./////
+Ever needed to run a command on currently editting file/folder? I've made a simple plugin to do just that.
 
 Save the following as `run_cmd.py` in your `Packages/User` folder.
 

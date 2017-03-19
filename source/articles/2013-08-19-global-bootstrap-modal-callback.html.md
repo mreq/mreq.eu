@@ -5,7 +5,9 @@ category: web
 tags: web, bootstrap, coffeescript
 ---
 
-If you are in need of a global callback for bootstrap modal, you can use the fired events.///// Simply add the following jQuery in coffeescript:
+If you are in need of a global callback for bootstrap modals, you can use the fired events.
+
+Simply add the following jQuery in coffeescript:
 
 ```coffee
 # coffee

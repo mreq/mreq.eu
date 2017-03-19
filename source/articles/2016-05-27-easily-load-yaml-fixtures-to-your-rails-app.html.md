@@ -5,7 +5,7 @@ category: web
 tags: web, rails
 ---
 
-While creating a semi-CMS rails skeleton/template (see [shle](https://github.com/sinfin/shle)), I've been looking into ways of loading app data during development (and to kick off the production database). Currently, there are no good options for loading complex data structures including relations. That's what led me to writing a custom lib for the task. /////
+While creating a semi-CMS rails skeleton/template (see [shle](https://github.com/sinfin/shle)), I've been looking into ways of loading app data during development (and to kick off the production database). Currently, there are no good options for loading complex data structures including relations. That's what led me to writing a custom lib for the task. 
 
 Imagine the following models:
 

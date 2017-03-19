@@ -5,7 +5,7 @@ category: ubuntu
 tags: ubuntu, spotify, bash
 ---
 
-Since there's no official way to control the spotify client by keyboard, I've written a script that does that./////
+Since there's no official way to control the spotify client by keyboard, I've written a script that does that.
 
 ## About the script
 

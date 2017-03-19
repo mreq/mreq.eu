@@ -7,7 +7,7 @@ tags: ubuntu, wmctrl, bash
 
 Xubuntu 13.04 which I'm using makes it easy to snap windows via mouse.
 But there are no keyboard shortcuts for it! Luckily, there's wmctrl
-which we'll use to create our own./////
+which we'll use to create our own.
 
 We'll need `wmctrl` installed, avaiable from the standard
 repositories.

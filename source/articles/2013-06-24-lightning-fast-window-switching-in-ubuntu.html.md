@@ -5,7 +5,7 @@ category: ubuntu
 tags: ubuntu, wmctrl, bash
 ---
 
-A tutorial on how to switch windows in Ubuntu really fast./////
+A tutorial on how to switch windows in Ubuntu really fast.
 
 We'll need `wmctrl` and `xbindkeys` installed, both avaiable from the standard repositories:
 

@@ -5,7 +5,7 @@ category: web
 tags: web, backbonejs, coffeescript
 ---
 
-To export a Backbone-relational model we can extend the original Backbone-relational model with three attributes and an export method./////
+To export a Backbone-relational model we can extend the original Backbone-relational model with three attributes and an export method.
 
 tl;dr, coffee version:
 

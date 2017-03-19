@@ -5,7 +5,7 @@ category: web
 tags: web, backbonejs, coffeescript
 ---
 
-Be careful when working with backbone-relational and cloning elements./////
+Be careful when working with backbone-relational and cloning elements.
 
 If you do clone elements using `toJSON` method, be sure to specify `includeInJSON: false` in the model definition, eg.
 

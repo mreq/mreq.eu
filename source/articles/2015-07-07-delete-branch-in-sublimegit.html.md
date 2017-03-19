@@ -5,7 +5,7 @@ category: sublime text
 tags: sublime text
 ---
 
-Sublimegit can't delete branches./////
+Sublimegit can't delete branches.
 
 I've written a simple sublime plugin, which enables unix users to do so.
 

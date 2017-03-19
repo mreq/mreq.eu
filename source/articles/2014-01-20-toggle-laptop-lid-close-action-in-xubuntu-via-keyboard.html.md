@@ -5,7 +5,9 @@ category: ubuntu
 tags: ubuntu, xfce, bash
 ---
 
-If you need to change the lid close action now and then a don't like clicking through the menus, you can use a script I wrote.///// The script is quite simple:
+If you need to change the lid close action now and then a don't like clicking through the menus, you can use a script I wrote.
+
+The script is quite simple:
 
 ```bash
 #!/bin/bash

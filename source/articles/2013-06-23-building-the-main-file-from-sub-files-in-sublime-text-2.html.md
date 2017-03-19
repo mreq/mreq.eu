@@ -5,7 +5,7 @@ category: sublime text
 tags: sublime text
 ---
 
-How to build a master file when working with sub-files? I've encountered this question on IRC and superuser often enough to create a post about it./////
+How to build a master file when working with sub-files? I've encountered this question on IRC and superuser often enough to create a post about it.
 
 You don't have to change the main-file in any way. For the sub-files, use a first-line comment like in the TeX file bellow:
 
