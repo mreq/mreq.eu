@@ -6,12 +6,13 @@ header.m-page-header
       *{tag: heading} class="m-page-header-title" mreq
 
     em.m-page-header-description
-      ' &hellip;a blog about <a href="#ubuntu">ubuntu</a>, <a href="#subl">sublime text</a> and the <a href="#web">web</a>
+      ' &hellip;a blog about <a href="/#ubuntu">ubuntu</a>, <a href="/#subl">sublime text</a> and the <a href="/#web">web</a>
 
-  form.m-page-header-form action="#"
-    input(
-      id="m-input"
-      placeholder="filter by tag / title"
-      type="text"
-      required=true
-    )
+  - unless current_article
+    form.m-page-header-form action="#"
+      input(
+        id="m-input"
+        placeholder="filter by tag / title"
+        type="text"
+        required=true
+      )

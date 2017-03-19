@@ -25,15 +25,18 @@
   input
     line-height: 35px
     height: 35px
-    padding: 0 10px
+    padding: 0 15px
     border: 1px solid $border-color
     color: $font-color
     font-size: $font-size-small
     display: block
     text-align: center
 
-    &:valid
-      text-align: left
+    &, &:focus
+      outline: 0
+
+    &:focus
+      box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.25)
 
 +mq-sm-up
   .m-page-header-form

@@ -20,13 +20,6 @@ $screen-xs-max: 767px
 
 @import 'reset-css/reset'
 
-=ul
-  margin-bottom: 0
-  padding-left: 0
-
-  li
-    list-style: none
-
 =mq-sm-up
   @media screen and (min-width: #{$screen-xs-max + 1})
     @content
@@ -69,7 +62,7 @@ a
   &:hover
     border-bottom-color: transparent
 
-  .m-page-header &, .m-article-meta &
+  .m-page-header &
     border-bottom: 0
 
 .m-container
@@ -81,3 +74,6 @@ a
 @import 'modules/page-header'
 @import 'modules/page-footer'
 @import 'modules/tags'
+@import 'modules/article-content'
+@import 'modules/fork-on-github'
+@import 'modules/disqus'
