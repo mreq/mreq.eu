@@ -1,10 +1,10 @@
 #!/bin/bash
 path=source/articles/images
-images=$( ls $path | grep '\.' )
-length=$( echo "$images" | wc -l )
 
-mkdir -p $path/thumbs
+mkdir -p "$path/thumbs"
 
-echo "$images" | xargs -I {} convert -resize 200x150^ -extent 200x150 $path/{} $path/thumbs/{}
-
-echo "Thumbnailed $length images."
+for f in $path/*; do
+  [ -f "$f" ] &&
+  echo "Thumbnailing $f." &&
+  convert -resize 930x600\> "$f" "$path/thumbs/$( basename "$f" )"
+done

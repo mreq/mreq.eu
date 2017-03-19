@@ -9,8 +9,8 @@ If you prefer keyboard over mouse like I do, you'll probably want a keyboard way
 
 We can use `dmenu` to go through our Music collection and make a auto-complete suggestion list to select Music from.
 
-[![Default selection view.](images/thumbs/2014-01-02-fast-clementine-music-selection-via-dmenu_1.png)](images/2014-01-02-fast-clementine-music-selection-via-dmenu_1.png)
-[![Start typing letters to filter the collection.](images/thumbs/2014-01-02-fast-clementine-music-selection-via-dmenu_2.png)](images/2014-01-02-fast-clementine-music-selection-via-dmenu_2.png)
+![Default selection view.](2014-01-02-fast-clementine-music-selection-via-dmenu_1.png)
+![Start typing letters to filter the collection.](2014-01-02-fast-clementine-music-selection-via-dmenu_2.png)
 
 We'll need to have some packages installed:
 

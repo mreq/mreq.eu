@@ -1,0 +1,31 @@
+.m-fork-gist
+  position: absolute
+  top: 0
+  right: 0
+  display: block
+  text-decoration: none
+  border-bottom: 0
+
+  &:before
+    transition: border-color .15s
+    content: ''
+    display: block
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 50px 50px 0
+    border-color: transparent #ccc transparent transparent
+
+  &:after
+    content: ''
+    display: block
+    width: 14px
+    height: 14px
+    position: absolute
+    top: 8px
+    right: 6px
+    background: image-url('octicon-gist-fork.png') 0 0 no-repeat
+
+  &:hover
+    &:before
+      border-color: transparent lighten(#ccc, 5%) transparent transparent

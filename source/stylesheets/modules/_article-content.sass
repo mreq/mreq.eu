@@ -1,5 +1,5 @@
 .m-article-content
-  p, ul, pre, h2, h3, h4, h5
+  p, ul, .m-pre, h2, h3, h4, h5, figure
     margin: 25px 0
     display: block
 
@@ -21,9 +21,26 @@
     border: 1px solid darken(#f3f3f3, 15%)
     max-width: 100%
     overflow-x: auto
+    display: block
+    margin: 0
 
     + pre
       margin-top: 30px
+
+  figure
+    a
+      display: block
+
+    img
+      display: block
+      margin: 0 auto
+      max-width: 100%
+
+  figcaption
+    font-size: $font-size-small
+    display: block
+    text-align: center
+    margin-top: 10px
 
   h2, h3, h4, h5
     +f-semi-bold
@@ -38,3 +55,6 @@
 
   p:first-child
     margin: 0
+
+  .m-pre
+    position: relative

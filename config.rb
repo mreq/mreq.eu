@@ -36,8 +36,34 @@ class CustomMarkdownRenderer < Redcarpet::Render::HTML
     super extensions.merge(link_attributes: { target: '_blank' })
   end
 
+  def html_escape(string)
+    string.gsub(/['&\"<>\/]/, {
+      '&' => '&amp;',
+      '<' => '&lt;',
+      '>' => '&gt;',
+      '"' => '&quot;',
+      "'" => '&#x27;',
+      "/" => '&#x2F;',
+    })
+  end
+
   def block_code(code, language)
-    %(<pre><code class="#{language}">#{code}</code></pre>)
+    %(<div class="m-pre">
+        <pre><code class="#{language}">#{html_escape(code)}</code></pre>
+      </div>)
+  end
+
+  def image(src, title, content)
+    caption = content.present? ? %{
+      <figcaption>#{content}</figcaption>
+    } : nil
+
+    %{<figure>
+        <a href="/articles/images/#{src}">
+          <img src="/articles/images/thumbs/#{src}" />
+        </a>
+        #{caption}
+      </figure>}
   end
 end
 
@@ -47,7 +73,10 @@ set :markdown, fenced_code_blocks: true,
                renderer: CustomMarkdownRenderer
 
 activate :syntax
-activate :sprockets
+activate :sprockets do |s|
+  s.supported_output_extensions << '.es6'
+end
+activate :autoprefixer
 activate :directory_indexes
 
 sprockets.append_path File.join(root, 'bower_components')

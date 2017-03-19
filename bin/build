@@ -1,3 +1,4 @@
 #!/bin/bash
-rm -rf build/*
+bin/generate_thumbnails &&
+rm -rf build/* &&
 bundle exec middleman build
