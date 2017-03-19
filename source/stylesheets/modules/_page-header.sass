@@ -1,7 +1,47 @@
 .m-page-header
   margin: 0 0 50px
+  display: flex
+  align-items: stretch
+  justify-content: space-between
 
 .m-page-header-title
   font-weight: $bold
-  display: block
-  margin: 0
+  font-size: $font-size-logo
+  display: inline-block
+  margin: 0 $grid-gutter-half 0 0
+
+.m-page-header-title-link
+  text-decoration: none
+
+.m-page-header-description
+  font-size: $font-size-small
+
+.m-page-header-form
+  display: flex
+  align-items: center
+
+  input
+    line-height: 35px
+    height: 35px
+    padding: 0 10px
+    border: 1px solid $border-color
+    color: $font-color
+    font-size: $font-size-small
+    display: block
+
++mq-xs
+  .m-page-header
+    flex-direction: column
+    text-align: center
+    margin-bottom: 30px
+
+  .m-page-header-title
+    padding: 5px 0 10px
+
+  .m-page-header-form
+    input
+      text-align: center
+      width: 100%
+
+  .m-page-header-description
+    display: none

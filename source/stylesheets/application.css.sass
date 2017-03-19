@@ -1,16 +1,21 @@
-$font-size-base: 20px
-$font-size-small: (( 0.75 * $font-size-base ))
+$font-size-base: 18px
+$font-size-small: 15px
+$font-size-logo: 30px
 
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
 $font-family-code: Consolas, "Liberation Mono", Menlo, Courier, monospace
 
-$font-color: lighten(black, 10%)
-$font-color-light: lighten($font-color, 25%)
+$link-color: black
+$font-color: #333
+$font-color-light: lighten($font-color, 40%)
+$border-color: lighten($font-color, 70%)
 
 $bold: 600
 
 $grid-gutter-width: 30px
 $grid-gutter-half: (( $grid-gutter-width / 2 ))
+
+$screen-xs-max: 767px
 
 @import 'reset-css/reset'
 
@@ -21,8 +26,13 @@ $grid-gutter-half: (( $grid-gutter-width / 2 ))
   li
     list-style: none
 
+=mq-xs
+  @media screen and (max-width: #{$screen-xs-max})
+    @content
+
 html
   overflow-y: scroll
+  min-width: 320px
 
 body
   font-size: $font-size-base
@@ -33,6 +43,17 @@ body
 
 code
   font-family: $font-family-code
+
+a
+  color: $link-color
+  text-decoration: none
+  border-bottom: 1px dotted $link-color
+
+  &:hover
+    border-bottom-color: transparent
+
+  .m-page-header &, .m-article-meta &
+    border-bottom: 0
 
 .m-container
   margin: 0 auto

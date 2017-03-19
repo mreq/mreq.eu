@@ -5,9 +5,24 @@
     font-weight: $bold
     margin: 0 0 10px
 
+.m-article-link
+  display: block
+  border-bottom: 0
+
+  &:visited
+    &, ~ *
+      visibility: hidden
+
 .m-article-meta
   font-size: $font-size-small
-  color: $font-color-light
   display: flex
   justify-content: space-between
   margin: 0 0 10px
+
+  &, a
+    color: $font-color-light
+
++mq-xs
+  .m-article-date
+    span
+      display: none
