@@ -120,6 +120,6 @@ The class that I'm about to present handles:
 
 The code is (I believe) self-explanatory:
 
-<pre><code class="ruby" data-remote="https://gist.githubusercontent.com/mreq/2846000864a49c9b936dff77f224014e">Loading...</code></pre>
+<div data-url="https://gist.githubusercontent.com/mreq/2846000864a49c9b936dff77f224014e" data-lang="ruby"></div>
 
 If you tweak the code further, be sure to drop me a line here or at the gist comments. I'd love to hear from you.

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require 'rouge'
 require 'rouge/plugins/redcarpet'
+require 'open-uri'
 
 configure :development do
   activate :livereload
@@ -52,6 +53,21 @@ class CustomMarkdownRenderer < Redcarpet::Render::HTML
         </a>
         #{caption}
       </figure>}
+  end
+
+  def block_html(html)
+    return super(html) unless html =~ /data-url/
+    no_newlines = html.gsub(/\n/, '')
+    url = no_newlines.gsub(/.+data-url="([^"]+)".+/, '\1')
+    lang = no_newlines.gsub(/.+data-lang="([^"]+)".+/, '\1')
+    code = open("#{url}/raw").read
+    %{
+      <div class="m-pre">
+        #{block_code(code, lang)}
+        <a href="#{url}" class="m-fork-gist" target="_blank"></a>
+      </div>
+    }
+
   end
 end
 
