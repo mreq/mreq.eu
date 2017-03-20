@@ -9,13 +9,13 @@ A tutorial on how to switch windows in Ubuntu really fast.
 
 We'll need `wmctrl` and `xbindkeys` installed, both avaiable from the standard repositories:
 
-```perl
+```shell_session
 sudo apt-get install wmctrl xbindkeys
 ```
 
 We'll use a script for the switching. Place it somewhere in your home directory (I did so in `~/scripts/bin/switch_to_app`) and make sure that it's executable - for my path:
 
-```perl
+```shell_session
 chmod +x petr ~/scripts/bin/switch_to_app
 ```
 
@@ -69,7 +69,7 @@ Aftewards make a `~/.xbindkeysrc` file with defined shortcuts, syntax is pretty 
 
 Once xbindkeys is loaded, fire your shortcuts at will. If you have multiple windows of an app opened, the script cycles through them. If you modify `.xbindkeysrc` you can restart xbindkeys by:
 
-```perl
+```shell_session
 killall xbindkeys && xbindkeys​
 ```
 

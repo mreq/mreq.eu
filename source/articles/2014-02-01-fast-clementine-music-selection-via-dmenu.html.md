@@ -14,7 +14,7 @@ We can use `dmenu` to go through our Music collection and make a auto-complete s
 
 We'll need to have some packages installed:
 
-```perl
+```shell_session
 sudo apt-get install dmenu clementine xbindkeys
 ```
 
@@ -54,13 +54,13 @@ exit 0
 
 Be sure to replace and or edit the Music path at the bottom of the script if you  don't have a standard Music folder structure. Otherwise, it should work out of the box. The usage is quite simple, pass either `append` - to append the folder to the current playlist or `load` (which is default) - to replace the current playlist - option:
 
-```perl
+```shell_session
 clementine_play_folder.sh load
 ```
 
 or
 
-```perl
+```shell_session
 clementine_play_folder.sh append
 ```
 

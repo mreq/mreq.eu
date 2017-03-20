@@ -11,13 +11,13 @@ You can find the tool on the [npm website](https://www.npmjs.org/package/bootstr
 
 To install:
 
-```
+```shell_session
 npm install -g bootstrap-prefixer
 ```
 
 To use:
 
-```
+```shell_session
 bootstrap-prefixer [prefix] [path to bootstrap/less]
 ```
 

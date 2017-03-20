@@ -12,7 +12,7 @@ which we'll use to create our own.
 We'll need `wmctrl` installed, avaiable from the standard
 repositories.
 
-```perl
+```shell_session
 sudo apt-get install wmctrl
 ```
 
@@ -20,7 +20,7 @@ We'll use a script for the switching. Place it somewhere in your home
 directory (I did so in `~/scripts/bin/wmctrl_snap_window`) and make sure
 that it's executable - for my path:
 
-```perl
+```shell_session
 chmod +x petr ~/scripts/bin/wmctrl_snap_window
 ```
 
@@ -49,13 +49,13 @@ exit 0
 To invoke the script, just call it with an (optional) argument `left` or
 `right` (default) to snap the window to left/right half of the screen:
 
-```perl
+```shell_session
 . ~/scripts/bin/wmctrl_snap_window left
 ```
 
 or:
 
-```perl
+```shell_session
 . ~/scripts/bin/wmctrl_snap_window right
 ```
 

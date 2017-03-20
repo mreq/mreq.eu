@@ -26,7 +26,7 @@ You might need to tweak the `$y` variable as this one assumes you have a top pan
 
 You'll need to have some packages installed. On *buntu:
 
-```perl
+```shell_session
 sudo apt-get install wmctrl xdotool xbindkeys
 ```
 
@@ -69,7 +69,7 @@ fi
 
 Make it executable
 
-```perl
+```shell_session
 chmod +x ~/scripts/play_pause_spotify.sh
 ```
 
@@ -77,19 +77,19 @@ chmod +x ~/scripts/play_pause_spotify.sh
 
 Play/pause spotify
 
-```perl
+```shell_session
 ~/scripts/play_pause_spotify.sh
 ```
 
 Play next
 
-```perl
+```shell_session
 ~/scripts/play_pause_spotify.sh next
 ```
 
 Play previous
 
-```perl
+```shell_session
 ~/scripts/play_pause_spotify.sh prev
 ```
 

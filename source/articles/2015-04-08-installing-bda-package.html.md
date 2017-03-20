@@ -27,7 +27,7 @@ In install.packages("bda") :
 
 That's caused by some missing libraries. To fix this, you need to install BLAS and LAPACK. On Ubuntu:
 
-```perl
+```shell_session
 sudo apt-get install liblapack-dev
 ```
 
