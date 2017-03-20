@@ -2,17 +2,18 @@
 
 header.m-page-header
   .m-page-header-text
-    a.m-page-header-title-link href="/"
+    a.m-page-header-title-link href="/#"
       *{tag: heading} class="m-page-header-title" mreq
 
     em.m-page-header-description
       ' &hellip;a blog about <a href="/#ubuntu">ubuntu</a>, <a href="/#subl">sublime text</a> and the <a href="/#web">web</a>
 
   - unless current_article
-    form.m-page-header-form action="#"
+    form.m-page-header-form action="/#"
       input(
         id="m-input"
         placeholder="filter by tag / title"
         type="text"
         required=true
+        autofocus=true
       )
