@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "imagesloaded": "^4.1",
+    "photoswipe": "^4.1",
     "reset-css": "^2.2"
   }
 }

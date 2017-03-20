@@ -1,3 +1,7 @@
+//= require photoswipe/dist/photoswipe
+//= require photoswipe/dist/default-skin/default-skin
+//= require reset-css/reset
+
 $font-size-base: 18px
 $font-size-small: 15px
 $font-size-big: 22px
@@ -18,8 +22,6 @@ $grid-gutter-width: 30px
 $grid-gutter-half: (( $grid-gutter-width / 2 ))
 
 $screen-xs-max: 767px
-
-@import 'reset-css/reset'
 
 =mq-sm-up
   @media screen and (min-width: #{$screen-xs-max + 1})
@@ -80,5 +82,6 @@ a
 @import 'modules/disqus'
 @import 'modules/fork-gist'
 @import 'modules/img'
+@import 'modules/pswp'
 
 @import 'github-highlight'

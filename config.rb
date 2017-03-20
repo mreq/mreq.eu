@@ -55,8 +55,8 @@ class CustomMarkdownRenderer < Redcarpet::Render::HTML
     color = `convert "source/#{path}" -scale 1x1\! -format '%[pixel:u]' info:-`.chomp.gsub('srgb', 'rgb')
 
     %{<figure>
-        <a class="m-img" href="/#{path}">
-          <span class="m-img-spacer" style="padding-top: #{padding_top.round(4)}%; max-width: #{width}px; background-color: #{color}"></span>
+        <a class="m-img" href="/#{path}" style="max-width: #{width}px" target="_blank" data-width="#{width}" data-height="#{height}">
+          <span class="m-img-spacer" style="padding-top: #{padding_top.round(4)}%; background-color: #{color}"></span>
         </a>
         #{caption}
       </figure>}
