@@ -1,6 +1,6 @@
 #!/bin/bash
 bin/build &&
 rm -rf build/tagged &&
-rsync -avz build/ mreq:mreq.eu --delete
+rsync -avz build/ mreq:www.mreq.eu --delete
 
 notify-send -u low -i emblem-default 'mreq-blog' 'Changes rsynced.'
