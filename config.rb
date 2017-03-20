@@ -47,9 +47,16 @@ class CustomMarkdownRenderer < Redcarpet::Render::HTML
       <figcaption>#{content}</figcaption>
     } : nil
 
+    path = "articles/images/#{src}"
+
+    width, height = `identify -format "%[w] %[h]" "source/#{path}"`.chomp.split(' ').map(&:to_i)
+    padding_top = 100 * height.to_f / width
+
+    color = `convert "source/#{path}" -scale 1x1\! -format '%[pixel:u]' info:-`.chomp.gsub('srgb', 'rgb')
+
     %{<figure>
-        <a href="/articles/images/#{src}">
-          <img src="/articles/images/thumbs/#{src}" />
+        <a class="m-img" href="/#{path}">
+          <span class="m-img-spacer" style="padding-top: #{padding_top.round(4)}%; max-width: #{width}px; background-color: #{color}"></span>
         </a>
         #{caption}
       </figure>}
