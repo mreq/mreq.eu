@@ -19,8 +19,17 @@ end
 page '/feed.xml', layout: false
 
 helpers do
+  def meta_title
+    current_page.data.title ? "#{current_page.data.title} | mreq.eu" : 'mreq.eu'
+  end
+
   def meta_description
-    'a blog about ubuntu, sublime text and the web'
+    return current_page.data.description if current_page.data.description
+    if current_article
+      strip_tags(current_article.summary)
+    else
+      'A blog by mreq.'
+    end
   end
 
   def link_to_github_article(current_article)
