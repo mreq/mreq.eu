@@ -17,3 +17,4 @@ gem 'coffee-script'
 
 gem 'redcarpet'
 gem 'nokogiri'
+gem 'rouge'

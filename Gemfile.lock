@@ -162,6 +162,7 @@ DEPENDENCIES
   nokogiri
   pry
   redcarpet
+  rouge
   sass
   slim
   sprockets-es6

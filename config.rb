@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+require 'rouge'
+require 'rouge/plugins/redcarpet'
+
 configure :development do
   activate :livereload
 end
@@ -32,25 +35,10 @@ helpers do
 end
 
 class CustomMarkdownRenderer < Redcarpet::Render::HTML
+  include Rouge::Plugins::Redcarpet
+
   def initialize(extensions = {})
     super extensions.merge(link_attributes: { target: '_blank' })
-  end
-
-  def html_escape(string)
-    string.gsub(/['&\"<>\/]/, {
-      '&' => '&amp;',
-      '<' => '&lt;',
-      '>' => '&gt;',
-      '"' => '&quot;',
-      "'" => '&#x27;',
-      "/" => '&#x2F;',
-    })
-  end
-
-  def block_code(code, language)
-    %(<div class="m-pre">
-        <pre><code class="#{language}">#{html_escape(code)}</code></pre>
-      </div>)
   end
 
   def image(src, title, content)
